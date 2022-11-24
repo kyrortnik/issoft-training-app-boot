@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2.2.0_FK_rowId
+      author:  mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: row_id
+            baseTableName: seats
+            constraintName: fk_seat_row_id
+            referencedColumnNames: id
+            referencedTableName: rows

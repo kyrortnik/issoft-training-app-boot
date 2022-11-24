@@ -1,0 +1,121 @@
+#admin pass 12345678
+#guest pass 1234567890
+#user pass 123456789
+#user2 pass 123456789
+databaseChangeLog:
+  - changeSet:
+      id: 3.6.0_insertUser_admin
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: login
+                  value: "admin"
+              - column:
+                  name: password
+                  value: "$2a$12$uCv4TWSx7nFmTUiXdHvsYe138xnKkXcnI2d0YO96i.tw4LuS9jIP6"
+              - column:
+                  name: email
+                  value: "admin@server.com"
+              - column:
+                  name: first_name
+                  value: "John"
+              - column:
+                  name: last_name
+                  value: "Smith"
+              - column:
+                  name: phone
+                  value: "+375444444444"
+  - changeSet:
+      id: 3.6.1_insertUser_user1
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: login
+                  value: "user"
+              - column:
+                  name: password
+                  value: "$2a$12$vsEOxZB.Rf0W0A/gzOYMW.ccMQZlzbXsJacxqdGdUeqyg.2ddA5Yi"
+              - column:
+                  name: email
+                  value: "user@server.com"
+              - column:
+                  name: first_name
+                  value: "Alice"
+              - column:
+                  name: last_name
+                  value: "Wood"
+              - column:
+                  name: phone
+                  value: "+000000000000"
+  - changeSet:
+      id: 3.6.2_insertUser_guest1
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: login
+                  value: "guest"
+              - column:
+                  name: password
+                  value: "$2a$12$/X/xJUg.jTWpY0mf2.GeSeDC1MymUh7RwPe6hwNPo6L/1xgrf4XVK"
+              - column:
+                  name: email
+                  value: "guest2@server.com"
+              - column:
+                  name: first_name
+                  value: "Bob"
+              - column:
+                  name: last_name
+                  value: "Goob"
+              - column:
+                  name: phone
+                  value: "+000000000001"
+  - changeSet:
+      id: 3.6.3_insertUser_user2
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: login
+                  value: "user2"
+              - column:
+                  name: password
+                  value: "$2a$12$vsEOxZB.Rf0W0A/gzOYMW.ccMQZlzbXsJacxqdGdUeqyg.2ddA5Yi"
+              - column:
+                  name: email
+                  value: "user2@server.com"
+              - column:
+                  name: first_name
+                  value: "Alick"
+              - column:
+                  name: last_name
+                  value: "Water"
+              - column:
+                  name: phone
+                  value: "+000000000001"

@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.1.0_insertMovie_Interstellar
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: movies
+            columns:
+              - column:
+                  name: title
+                  value: "Interstellar"
+              - column:
+                  name: length
+                  value: 145
+              - column:
+                  name: is_3d
+                  value: false
+              - column:
+                  name: is_imax
+                  value: false
+              - column:
+                  name: days_in_rotation
+                  value: 45
+
+  - changeSet:
+      id: 3.1.1_insertMovie_OnceUponATimeInHollywood
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: movies
+            columns:
+              - column:
+                  name: title
+                  value: "Once Upon A Time In Hollywood"
+              - column:
+                  name: length
+                  value: 130
+              - column:
+                  name: is_3d
+                  value: false
+              - column:
+                  name: is_imax
+                  value: false
+              - column:
+                  name: days_in_rotation
+                  value: 45

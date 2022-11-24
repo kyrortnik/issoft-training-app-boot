@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2.0.0_FK_cinemaId
+      author:  mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cinema_id
+            baseTableName: halls
+            constraintName: fk_hall_cinema_id
+            referencedColumnNames: id
+            referencedTableName: cinemas

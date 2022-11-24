@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2.5.0_FK_buyerId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: buyer_id
+            baseTableName: tickets
+            constraintName: fk_ticket_buyer_id
+            referencedColumnNames: id
+            referencedTableName: users
+  - changeSet:
+      id: 2.5.1_FK_hallId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: hall_id
+            baseTableName: tickets
+            constraintName: fk_ticket_hall_id
+            referencedColumnNames: id
+            referencedTableName: halls
+  - changeSet:
+      id: 2.5.2_FK_seatId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: seat_id
+            baseTableName: tickets
+            constraintName: fk_ticket_seat_id
+            referencedColumnNames: id
+            referencedTableName: seats
+  - changeSet:
+      id: 2.5.3_FK_movieId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: movie_id
+            baseTableName: tickets
+            constraintName: fk_ticket_movie_id
+            referencedColumnNames: id
+            referencedTableName: movies

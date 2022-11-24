@@ -1,0 +1,59 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.5.0_insertRole_admin
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: ROLE_CINEMA_ADMIN
+  - changeSet:
+      id: 3.5.1_insertRole_oktyabr_admin
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: ROLE_CINEMA_ADMIN_OKTYABR
+
+  - changeSet:
+      id: 3.5.2_insertRole_user
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: ROLE_USER
+
+  - changeSet:
+      id: 3.5.3_insertRole_guest
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: ROLE_GUEST

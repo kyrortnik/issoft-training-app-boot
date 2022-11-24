@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.2.0_createTableCinemasMoviesLink
+      author: mikhail_piatrenka
+      changes:
+        - createTable:
+            tableName: cinemas_movies_link
+            columns:
+              - column:
+                  name: cinema_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: movie_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false

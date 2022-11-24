@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.2.0_insertHall_red
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls
+            columns:
+              - column:
+                  name: cinema_id
+                  value: 1
+              - column:
+                  name: name
+                  value: "red"
+              - column:
+                  name: has_3d_support
+                  value: true
+              - column:
+                  name: has_imax_support
+                  value: false
+  - changeSet:
+      id: 3.2.1_insertHall_blue
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls
+            columns:
+              - column:
+                  name: cinema_id
+                  value: 2
+              - column:
+                  name: name
+                  value: "blue"
+              - column:
+                  name: has_3d_support
+                  value: true
+              - column:
+                  name: has_imax_support
+                  value: true

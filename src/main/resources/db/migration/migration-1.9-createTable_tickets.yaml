@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.9.0_createTableTickets
+      author: mikhail_piatrenka
+      changes:
+        - createTable:
+            tableName: tickets
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: code
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: buyer_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: hall_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: seat_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: session_datetime
+                  type: DATETIME
+                  constraints:
+                    nullable: false
+              - column:
+                  name: movie_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: purchase_datetime
+                  type: DATETIME
+                  constraints:
+                    nullable: false

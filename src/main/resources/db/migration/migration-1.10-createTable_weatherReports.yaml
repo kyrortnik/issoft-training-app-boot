@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.10.0_createTableWeatherReports
+      author: mikhail_piatrenka
+      changes:
+        - createTable:
+            tableName: weather_reports
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: dt
+                  type: TIMESTAMP
+              - column:
+                  name: temperature
+                  type: DECIMAL(20,2)
+              - column:
+                  name: feels_like
+                  type: DECIMAL(20,2)
+              - column:
+                  name: temperature_min
+                  type: DECIMAL(20,2)
+              - column:
+                  name: temperature_max
+                  type: DECIMAL(20,2)
+              - column:
+                  name: sunrise
+                  type: TIMESTAMP
+              - column:
+                  name: sunset
+                  type: TIMESTAMP
+              - column:
+                  name: country
+                  type: VARCHAR
