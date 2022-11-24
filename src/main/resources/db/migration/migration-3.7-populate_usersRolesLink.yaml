@@ -1,0 +1,88 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.7.0_insertUserRoleLink_CINEMA_ADMIN
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users_roles_link
+            columns:
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 1
+  - changeSet:
+      id: 3.7.1_insertUserRoleLink_OKTYABR_CINEMA_ADMIN
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users_roles_link
+            columns:
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 2
+
+  - changeSet:
+      id: 3.7.1_insertUserRoleLink_USER1
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users_roles_link
+            columns:
+              - column:
+                  name: user_id
+                  value: 2
+              - column:
+                  name: role_id
+                  value: 3
+
+  - changeSet:
+      id: 3.7.2_insertUserRoleLink_GUEST
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users_roles_link
+            columns:
+              - column:
+                  name: user_id
+                  value: 3
+              - column:
+                  name: role_id
+                  value: 4
+  - changeSet:
+      id: 3.7.1_insertUserRoleLink_USER2
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: users_roles_link
+            columns:
+              - column:
+                  name: user_id
+                  value: 4
+              - column:
+                  name: role_id
+                  value: 3

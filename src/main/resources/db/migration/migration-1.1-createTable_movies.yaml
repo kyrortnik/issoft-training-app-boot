@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.1.0_createTableMovies
+      author: mikhail_piatrenka
+      changes:
+        - createTable:
+            tableName: movies
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: length
+                  type: SMALLINT
+              - column:
+                  name: is_3d
+                  type: BOOLEAN
+              - column:
+                  name: is_imax
+                  type: BOOLEAN
+              - column:
+                  name: days_in_rotation
+                  type: SMALLINT
+              - column:
+                  name: poster_link
+                  type: VARCHAR(255)

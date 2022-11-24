@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2.7.0_FK_auditId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: audit_id
+            baseTableName: arguments
+            constraintName: fk_argument_id_audit_id
+            referencedColumnNames: id
+            referencedTableName: audits

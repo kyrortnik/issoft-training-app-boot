@@ -1,0 +1,129 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.8.0_insertTicket_oktyabr_first
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: tickets
+            columns:
+              - column:
+                  name: code
+                  value: "001"
+              - column:
+                  name: buyer_id
+                  value: 2
+              - column:
+                  name: hall_id
+                  value: 1
+              - column:
+                  name: seat_id
+                  value: 1
+              - column:
+                  name: session_datetime
+                  value: "2022-12-30T19:00:00.000"
+              - column:
+                  name: movie_id
+                  value: 1
+              - column:
+                  name: purchase_datetime
+                  value: "2022-11-29T19:00:00.000"
+  - changeSet:
+      id: 3.8.1_insertTicket_oktyabr_second
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: tickets
+            columns:
+              - column:
+                  name: code
+                  value: "002"
+              - column:
+                  name: buyer_id
+                  value: 2
+              - column:
+                  name: hall_id
+                  value: 1
+              - column:
+                  name: seat_id
+                  value: 2
+              - column:
+                  name: session_datetime
+                  value: "2022-12-30T19:00:00.000"
+              - column:
+                  name: movie_id
+                  value: 1
+              - column:
+                  name: purchase_datetime
+                  value: "2022-11-29T19:00:00.000"
+  - changeSet:
+      id: 3.8.2_insertTicket_aurora_first
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: tickets
+            columns:
+              - column:
+                  name: code
+                  value: "003"
+              - column:
+                  name: buyer_id
+                  value: 2
+              - column:
+                  name: hall_id
+                  value: 2
+              - column:
+                  name: seat_id
+                  value: 1
+              - column:
+                  name: session_datetime
+                  value: "2022-12-30T19:00:00.000"
+              - column:
+                  name: movie_id
+                  value: 1
+              - column:
+                  name: purchase_datetime
+                  value: "2022-11-29T19:00:00.000"
+  - changeSet:
+      id: 3.8.2_insertTicket_aurora_second
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: tickets
+            columns:
+              - column:
+                  name: code
+                  value: "004"
+              - column:
+                  name: buyer_id
+                  value: 4
+              - column:
+                  name: hall_id
+                  value: 2
+              - column:
+                  name: seat_id
+                  value: 2
+              - column:
+                  name: session_datetime
+                  value: "2022-12-30T19:00:00.000"
+              - column:
+                  name: movie_id
+                  value: 1
+              - column:
+                  name: purchase_datetime
+                  value: "2022-11-19T19:00:00.000"

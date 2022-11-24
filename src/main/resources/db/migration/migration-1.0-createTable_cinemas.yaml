@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.0_createTableCinemas
+      author: mikhail_piatrenka
+      changes:
+        - createTable:
+            tableName: cinemas
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: start_work_time
+                  type: time
+              - column:
+                  name: close_work_time
+                  type: time
+              - column:
+                  name: image_url
+                  type: varchar(255)
+              - column:
+                  name: dt_opened
+                  type: datetime

@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2.1.0_FK_hallId
+      author:  mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: hall_id
+            baseTableName: rows
+            constraintName: fk_row_hall_id
+            referencedColumnNames: id
+            referencedTableName: halls

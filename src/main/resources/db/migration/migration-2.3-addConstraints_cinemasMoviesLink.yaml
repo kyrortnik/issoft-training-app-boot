@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2.3.0_FK_cinemaId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cinema_id
+            baseTableName: cinemas_movies_link
+            constraintName: fk_cinemas_movies_link_cinema_id
+            referencedColumnNames: id
+            referencedTableName: cinemas
+  - changeSet:
+      id: 2.3.1_FK_movieId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: movie_id
+            baseTableName: cinemas_movies_link
+            constraintName: fk_cinemas_movies_link_movie_id
+            referencedColumnNames: id
+            referencedTableName: movies

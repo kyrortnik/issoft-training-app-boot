@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.3.0_insertRow_1
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: rows
+            columns:
+              - column:
+                  name: number
+                  value: 1
+              - column:
+                  name: hall_id
+                  value: 1
+
+  - changeSet:
+      id: 3.3.1_insertRow_2
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: rows
+            columns:
+              - column:
+                  name: number
+                  value: 1
+              - column:
+                  name: hall_id
+                  value: 2

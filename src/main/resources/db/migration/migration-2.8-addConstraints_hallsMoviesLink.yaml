@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2.3.0_FK_hallId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: hall_id
+            baseTableName: halls_movies_link
+            constraintName: fk_halls_movies_link_hall_id
+            referencedColumnNames: id
+            referencedTableName: halls
+  - changeSet:
+      id: 2.3.1_FK_movieId
+      author: mikhail_piatrenka
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: movie_id
+            baseTableName: halls_movies_link
+            constraintName: fk_halls_movies_link_movie_id
+            referencedColumnNames: id
+            referencedTableName: movies

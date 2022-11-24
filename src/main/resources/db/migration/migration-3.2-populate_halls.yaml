@@ -1,0 +1,105 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.2.0_insertHall_oktyabr_red
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls
+            columns:
+              - column:
+                  name: cinema_id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Red Hall"
+              - column:
+                  name: has_3d_support
+                  value: true
+              - column:
+                  name: has_imax_support
+                  value: false
+              - column:
+                  name: image_url
+                  value: "img/halls/red.0.jpg"
+  - changeSet:
+      id: 3.2.1_insertHall_aurora_blue
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls
+            columns:
+              - column:
+                  name: cinema_id
+                  value: 2
+              - column:
+                  name: name
+                  value: "Blue Hall"
+              - column:
+                  name: has_3d_support
+                  value: true
+              - column:
+                  name: has_imax_support
+                  value: true
+              - column:
+                  name: image_url
+                  value: "img/halls/blue.0.jpg"
+  - changeSet:
+      id: 3.2.2_insertHall_oktyabr_orange
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls
+            columns:
+              - column:
+                  name: cinema_id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Orange Hall"
+              - column:
+                  name: has_3d_support
+                  value: true
+              - column:
+                  name: has_imax_support
+                  value: true
+              - column:
+                  name: image_url
+                  value: "img/halls/orange.0.jpg"
+  - changeSet:
+      id: 3.2.3_insertHall_aurora_green
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls
+            columns:
+              - column:
+                  name: cinema_id
+                  value: 2
+              - column:
+                  name: name
+                  value: "Green Hall"
+              - column:
+                  name: has_3d_support
+                  value: true
+              - column:
+                  name: has_imax_support
+                  value: true
+              - column:
+                  name: image_url
+                  value: "img/halls/green.0.jpg"

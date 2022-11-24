@@ -1,0 +1,103 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.7.0_insertHallsMoviesLink_red_Interstellar
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls_movies_link
+            columns:
+              - column:
+                  name: hall_id
+                  value: 1
+              - column:
+                  name: movie_id
+                  value: 1
+  - changeSet:
+      id: 3.7.1_insertHallsMoviesLink_red_OnceUponATimeInHollywood
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls_movies_link
+            columns:
+              - column:
+                  name: hall_id
+                  value: 1
+              - column:
+                  name: movie_id
+                  value: 2
+  - changeSet:
+      id: 3.7.2_insertHallsMoviesLink_red_ApocalypseNow
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls_movies_link
+            columns:
+              - column:
+                  name: hall_id
+                  value: 1
+              - column:
+                  name: movie_id
+                  value: 3
+  - changeSet:
+      id: 3.7.3_insertHallsMoviesLink_blue_FindingNemo
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls_movies_link
+            columns:
+              - column:
+                  name: hall_id
+                  value: 2
+              - column:
+                  name: movie_id
+                  value: 4
+  - changeSet:
+      id: 3.7.4_insertHallsMoviesLink_blue_DecisionToLeave
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls_movies_link
+            columns:
+              - column:
+                  name: hall_id
+                  value: 2
+              - column:
+                  name: movie_id
+                  value: 5
+  - changeSet:
+      id: 3.7.5_insertHallsMoviesLink_blue_Parasite
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: halls_movies_link
+            columns:
+              - column:
+                  name: hall_id
+                  value: 2
+              - column:
+                  name: movie_id
+                  value: 6

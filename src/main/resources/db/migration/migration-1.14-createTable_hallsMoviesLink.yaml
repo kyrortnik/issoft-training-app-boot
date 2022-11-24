@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.14.0_createTableHallsMoviesLink
+      author: mikhail_piatrenka
+      changes:
+        - createTable:
+            tableName: halls_movies_link
+            columns:
+              - column:
+                  name: hall_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: movie_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false

@@ -1,0 +1,176 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.1.0_insertMovie_Interstellar
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: movies
+            columns:
+              - column:
+                  name: title
+                  value: "Interstellar"
+              - column:
+                  name: length
+                  value: 145
+              - column:
+                  name: is_3d
+                  value: false
+              - column:
+                  name: is_imax
+                  value: false
+              - column:
+                  name: days_in_rotation
+                  value: 45
+              - column:
+                  name: poster_link
+                  value: "img/movies/interstellar.0.jpg"
+
+  - changeSet:
+      id: 3.1.1_insertMovie_OnceUponATimeInHollywood
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: movies
+            columns:
+              - column:
+                  name: title
+                  value: "Once Upon A Time In Hollywood"
+              - column:
+                  name: length
+                  value: 130
+              - column:
+                  name: is_3d
+                  value: false
+              - column:
+                  name: is_imax
+                  value: false
+              - column:
+                  name: days_in_rotation
+                  value: 45
+              - column:
+                  name: poster_link
+                  value: "img/movies/once_upon_a_time_in_hollywood.0.jpg"
+  - changeSet:
+      id: 3.1.2_insertMovie_ApocalypseNow
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: movies
+            columns:
+              - column:
+                  name: title
+                  value: "Apocalypse Now"
+              - column:
+                  name: length
+                  value: 190
+              - column:
+                  name: is_3d
+                  value: false
+              - column:
+                  name: is_imax
+                  value: false
+              - column:
+                  name: days_in_rotation
+                  value: 15
+              - column:
+                  name: poster_link
+                  value: "img/movies/apocalypse_now.0.jpg"
+  - changeSet:
+      id: 3.1.3_insertMovie_FindingNemo
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: movies
+            columns:
+              - column:
+                  name: title
+                  value: "Finding Nemo"
+              - column:
+                  name: length
+                  value: 100
+              - column:
+                  name: is_3d
+                  value: false
+              - column:
+                  name: is_imax
+                  value: false
+              - column:
+                  name: days_in_rotation
+                  value: 20
+              - column:
+                  name: poster_link
+                  value: "img/movies/finding_nemo.0.jpg"
+  - changeSet:
+      id: 3.1.4_insertMovie_DecisionToLeave
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: movies
+            columns:
+              - column:
+                  name: title
+                  value: "Decision to Leave"
+              - column:
+                  name: length
+                  value: 141
+              - column:
+                  name: is_3d
+                  value: false
+              - column:
+                  name: is_imax
+                  value: false
+              - column:
+                  name: days_in_rotation
+                  value: 30
+              - column:
+                  name: poster_link
+                  value: "img/movies/decision_to_leave.0.jpg"
+  - changeSet:
+      id: 3.1.5_insertMovie_Parasite
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: movies
+            columns:
+              - column:
+                  name: title
+                  value: "Parasite"
+              - column:
+                  name: length
+                  value: 147
+              - column:
+                  name: is_3d
+                  value: false
+              - column:
+                  name: is_imax
+                  value: true
+              - column:
+                  name: days_in_rotation
+                  value: 30
+              - column:
+                  name: poster_link
+                  value: "img/movies/parasite.0.jpg"

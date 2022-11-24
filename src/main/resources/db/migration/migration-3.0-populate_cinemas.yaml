@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.0.0_insertCinema_oktyabr
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: cinemas
+            columns:
+              - column:
+                  name: name
+                  value: "Oktyabr"
+              - column:
+                  name: start_work_time
+                  value: "10:00:00"
+              - column:
+                  name: close_work_time
+                  value: "22:00:00"
+              - column:
+                  name: image_url
+                  value: "img/cinemas/oktyabr_1.jpg"
+              - column:
+                  name: dt_opened
+                  value: "1978-12-30T19:00:00.000"
+  - changeSet:
+      id: 3.0.1_insertCinema_aurora
+      author: mikhail_piatrenka
+      preConditions:
+        - onFail: CONTINUE
+        - runningAs:
+            - username: ADMIN
+      changes:
+        - insert:
+            tableName: cinemas
+            columns:
+              - column:
+                  name: name
+                  value: "Aurora"
+              - column:
+                  name: start_work_time
+                  value: "11:00:00"
+              - column:
+                  name: close_work_time
+                  value: "22:00:00"
+              - column:
+                  name: image_url
+                  value: "img/cinemas/aurora_1.jpg"
+              - column:
+                  name: dt_opened
+                  value: "1991-12-30T19:00:00.000"

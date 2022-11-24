@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.12.0_createTableAudits
+      author: mikhail_piatrenka
+      changes:
+        - createTable:
+            tableName: audits
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: method_signature
+                  type: VARCHAR
+              - column:
+                  name: return_value
+                  type: VARCHAR
+              - column:
+                  name: exception_type
+                  type: VARCHAR
+              - column:
+                  name: exception_message
+                  type: VARCHAR
+              - column:
+                  name: execution_datetime
+                  type: TIMESTAMP
